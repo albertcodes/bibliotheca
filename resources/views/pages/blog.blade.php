@@ -1,2 +1,6 @@
-<h1>Blog</h1>
-<p>blog works</p>
+@extends('layouts.app')
+
+@section('content')
+    <h1>{{$title}}</h1>
+    <p>Blog page</p>
+@endsection
