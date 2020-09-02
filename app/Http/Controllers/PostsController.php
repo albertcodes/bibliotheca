@@ -20,6 +20,8 @@ class PostsController extends Controller
 
         // To order posts with a particular parameter in ascending or descending
         // $posts = Post::orderBy('title', 'desc')->get();
+        // Add "take(2)" to limit to 2 and so on....
+        $posts = Post::orderBy('title', 'desc')->take(1)->get();
 
         //  To get all data from DB using SQL query
         // $posts = DB::select('SELECT * FROM posts');
