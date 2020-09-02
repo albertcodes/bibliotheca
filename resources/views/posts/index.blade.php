@@ -9,7 +9,9 @@
             <p class="text-muted">Written on: 
                 <small class="text-success"> {{$post->created_at}}</small>
             </p>
-        </div>        
+        </div>
+        {{-- Pagination --}}
+        {{$posts->links()}}       
     @endforeach
 
   @else

@@ -16,16 +16,20 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        // $posts = Post::all();
 
         // To order posts with a particular parameter in ascending or descending
         // $posts = Post::orderBy('title', 'desc')->get();
-        
+
         // Add "take(2)" to limit to 2 and so on....
         // $posts = Post::orderBy('title', 'desc')->take(1)->get();
 
         //  To get all data from DB using SQL query
         // $posts = DB::select('SELECT * FROM posts');
+
+        // Pagination
+        $posts = Post::orderBy('title', 'desc')->paginate(1);
+
 
 
         return view('posts.index')->with('posts', $posts);
