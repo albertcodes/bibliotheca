@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+// Using SQL queries
+use DB;
 
 class PostsController extends Controller
 {
@@ -14,9 +16,15 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        // $posts = Post::all();
+
         // To order posts with a particular parameter in ascending or descending
         // $posts = Post::orderBy('title', 'desc')->get();
+
+        //  To get all data from DB using SQL query
+        $posts = DB::select('SELECT * FROM posts');
+
+
         return view('posts.index')->with('posts', $posts);
     }
 
