@@ -16,7 +16,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        // $posts = Post::all();
+        $posts = Post::all();
 
         // To order posts with a particular parameter in ascending or descending
         // $posts = Post::orderBy('title', 'desc')->get();
@@ -28,9 +28,7 @@ class PostsController extends Controller
         // $posts = DB::select('SELECT * FROM posts');
 
         // Pagination
-        $posts = Post::orderBy('title', 'desc')->paginate(1);
-
-
+        // $posts = Post::orderBy('title', 'desc')->paginate(1);
 
         return view('posts.index')->with('posts', $posts);
     }

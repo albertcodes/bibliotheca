@@ -11,7 +11,7 @@
             </p>
         </div>
         {{-- Pagination --}}
-        {{$posts->links()}}       
+        {{-- {{$posts->links()}} --}}
     @endforeach
 
   @else
