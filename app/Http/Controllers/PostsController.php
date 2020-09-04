@@ -16,10 +16,10 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        // $posts = Post::all();
 
         // To order posts with a particular parameter in ascending or descending
-        // $posts = Post::orderBy('title', 'desc')->get();
+        $posts = Post::orderBy('created_at', 'desc')->get();
 
         // Add "take(2)" to limit to 2 and so on....
         // $posts = Post::orderBy('title', 'desc')->take(1)->get();
@@ -40,7 +40,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -51,7 +51,17 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this -> validate($request, [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+        // Create post
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+
+        return redirect('/posts')->with('success', 'Post created successfully');
     }
 
     /**
