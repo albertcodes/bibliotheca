@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <h6 class="text-success">You are logged in!</h6>
                 </div>
             </div>
         </div>
