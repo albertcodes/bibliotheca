@@ -19,7 +19,7 @@ class PostsController extends Controller
         // $posts = Post::all();
 
         // To order posts with a particular parameter in ascending or descending
-        $posts = Post::orderBy('created_at', 'desc')->get();
+        // $posts = Post::orderBy('created_at', 'desc')->get();
 
         // Add "take(2)" to limit to 2 and so on....
         // $posts = Post::orderBy('title', 'desc')->take(1)->get();
@@ -28,7 +28,7 @@ class PostsController extends Controller
         // $posts = DB::select('SELECT * FROM posts');
 
         // Pagination
-        // $posts = Post::orderBy('title', 'desc')->paginate(1);
+        $posts = Post::orderBy('title', 'desc')->paginate(6);
 
         return view('posts.index')->with('posts', $posts);
     }

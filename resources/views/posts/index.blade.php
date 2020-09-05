@@ -10,9 +10,9 @@
                 <small class="text-success"> {{$post->created_at}}</small>
             </p>
         </div>
-        {{-- Pagination --}}
-        {{-- {{$posts->links()}} --}}
     @endforeach
+    {{-- Pagination --}}
+    {{$posts->links()}}
 
   @else
     <h1>No Posts Found!</h1>
