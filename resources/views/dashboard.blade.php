@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    <h6 class="text-success">You are logged in!</h6>
+                    <a class="btn btn-primary" href="/posts/create">Create Post</a>
+                    <h4 class="my-2">Your blog posts</h4>
                 </div>
             </div>
         </div>
