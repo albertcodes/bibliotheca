@@ -8,6 +8,8 @@
         <h4 class="text-primary"> <a href="/posts/{{$post->id}}"> {{$post->title}}</a></h4>
             <p class="text-muted">Written on: 
                 <small class="text-success"> {{$post->created_at}}</small>
+                by
+                <small class="text-success"> {{$post->user->name}}</small>
             </p>
         </div>
     @endforeach
