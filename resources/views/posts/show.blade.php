@@ -1,7 +1,7 @@
 @extends ('layouts.app')
 
 @section('content')
-<a class="btn btn-danger my-2" href="/posts"><i class="fa fa-arrow-circle-left"></i> Back</a>
+<a class="btn btn-default my-2 text-danger" href="/posts"><i class="fa fa-arrow-circle-left"></i> < Back</a>
     <h1>{{$post->title}}</h1>
     <div>
         {!!$post->body!!}
