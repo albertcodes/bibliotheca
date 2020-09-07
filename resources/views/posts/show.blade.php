@@ -3,9 +3,8 @@
 @section('content')
 <a class="btn btn-default my-2 text-danger" href="/posts"><i class="fa fa-arrow-circle-left"></i> < Back</a>
     <h1>{{$post->title}}</h1>
-    <div>
-        {!!$post->body!!}
-    </div>
+    <div class="m-1">{!!$post->body!!}</div>
+    <img style="width: 99%;" src="/storage/cover_images/{{$post->cover_image}}">
     <hr>
     <small class="text-muted">Written on: {{$post->created_at}}</small>
     <small class="text-muted">by {{$post->user->name}}</small>
