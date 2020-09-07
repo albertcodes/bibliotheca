@@ -10928,3 +10928,15 @@ a.text-dark:focus {
   }
 }
 
+a :hover {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+.blog-posts p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
