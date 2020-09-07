@@ -21,13 +21,14 @@
                             <tr>
                                 <th>Title</th>
                                 <th></th>
-                                <th></th>
+                                <th>Actions</th>
                             </tr>
                             @foreach ($posts as $post)
                             <tr>
                                 <td>{{$post->title}}</th>
-                                <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></th>
+                                <td></td>
                                 <td>
+                                    <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
                                     {!!Form::open(['action'=>['PostsController@destroy', $post->id], 'method'=>'POST', 'class'=>'float-right'])!!}
                                         {{Form::hidden('_method', 'DELETE')}}
                                         {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
