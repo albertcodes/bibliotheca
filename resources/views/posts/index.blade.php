@@ -1,7 +1,7 @@
 @extends ('layouts.app')
 
 @section('content')
-  <h1>Posts</h1>
+  <h1>Blogs</h1>
   @if(count($posts) > 0)
     @foreach($posts as $post)
         <div class="well border p-2 m-2 rounded-lg">
@@ -17,7 +17,7 @@
     {{$posts->links()}}
 
   @else
-    <h1>No Posts Found!</h1>
+    <h4 class="text-secondary">No Posts Found!</h4>
       
   @endif
 @endsection
