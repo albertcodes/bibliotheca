@@ -16,12 +16,31 @@ class PagesController extends Controller
         return view('pages.about')->with('title', $title);
     }
 
-    public function services(){
+    public function category(){
         $data = array(
-            'title' => 'Services',
-            'services' => ['Web Design', 'Programming', 'SEO'],
+            'title' => 'Categories',
+            'categories' => [
+                'Fashion Blogs',
+                'Food Blogs',
+                'Travel Blogs',
+                'Music Blogs',
+                'Lifestyle Blogs',
+                'Fitness Blogs',
+                'DIY Blogs',
+                'Sports Blogs',
+                'Finance Blogs',
+                'Political Blogs',
+                'Parenting Blogs',
+                'Business Blogs',
+                'Personal Blogs',
+                'Movie Blogs',
+                'Car Blogs',
+                'News Blogs',
+                'Pet Blogs',
+                'Gaming Blogs',
+            ],
         );
-        return view('pages.services')->with($data);
+        return view('pages.categories')->with($data);
 
     }
     public function contact(){

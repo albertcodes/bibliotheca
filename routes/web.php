@@ -29,7 +29,7 @@ Dynamic user example
 
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
-Route::get('/services', 'PagesController@services');
+Route::get('/categories', 'PagesController@category');
 
 Route::resource('/posts', 'PostsController');
 Auth::routes();

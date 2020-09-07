@@ -15,19 +15,22 @@
                     @endif
 
                     <a class="btn btn-primary" href="/posts/create">Create Post</a>
-                    <h4 class="my-2">Your blog posts</h4>
+                    <h3 class="my-2">Your blog posts</h3>
                     @if (count($posts) > 0)                  
-                        <table class="table table-striped">
-                            <tr>
-                                <th>Title</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
+                        <table class="table table-borderless">
+                            <thead class="thead-light font-weight-bold h5">
+                                <tr>
+                                    <th>Blog:</th>
+                                    <th></th>
+                                    <th>Actions:</th>
+                                </tr>
+                              </thead>
                             @foreach ($posts as $post)
                             <tr>
                                 <td>{{$post->title}}</th>
-                                <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></th>
+                                <td></td>
                                 <td>
+                                    <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
                                     {!!Form::open(['action'=>['PostsController@destroy', $post->id], 'method'=>'POST', 'class'=>'float-right'])!!}
                                         {{Form::hidden('_method', 'DELETE')}}
                                         {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
