@@ -1,7 +1,7 @@
 @extends ('layouts.app')
 
 @section('content')
-  <h1>Blogs</h1>
+  <h1>Blog</h1>
   @if(count($posts) > 0)
     @foreach($posts as $post)
         <div class="well border p-2 m-2 rounded-lg">
