@@ -19,10 +19,10 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/categories">Category</a>
+                    <a class="nav-link" href="/posts">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/posts">Blog</a>
+                    <a class="nav-link" href="/categories">Categories</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/about">About</a>
